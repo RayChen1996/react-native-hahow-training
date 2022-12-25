@@ -44,14 +44,12 @@ const App =  () => {
         <View style={{flex:1,flexDirection:'column'}} >
           <View style={{flex:1, flexDirection:'row',  }}>
             <View style={{ flex:1,}}>
-                <TouchableOpacity   
-                  
+                <TouchableOpacity                     
                 style={{
                   flex:1,
                   alignItems: "center",
                   justifyContent:'center',
-                  backgroundColor:'blue',
-                  
+                  backgroundColor:'blue',                  
                   margin:10,
                   padding: 10,
                   borderRadius:25,
@@ -75,6 +73,9 @@ const App =  () => {
                   margin:10,
                   padding: 10
                 }}   
+                onPress={()=>{
+                  setPage(2)
+                }}
                 >
                   <Text
                     style={{color:'white',}}
@@ -163,12 +164,8 @@ const App =  () => {
                </TouchableOpacity>
             </View>
             <View style={{flex:1, }}>
-       
-             
+      
             </View>
-
- 
-
           </View>
           {/* <View style={{flex:1,flexDirection:'row',}}>
 
@@ -189,14 +186,13 @@ const App =  () => {
     }else if(page ==2){
       return <OpenDataDemo />
     }
-    
-     
+  
   }
   const getTitle = () => {
     if(page==0){
-      return      <Text
-      style={{color:'black'}}
-     >主頁</Text>
+      return  <Text
+         style={{color:'black'}}
+       >主頁</Text>
     }else if(page==1){
       return      <Text
       style={{color:'black'}}
@@ -207,6 +203,31 @@ const App =  () => {
      >Fetch API</Text>
     }
   }
+
+  const getBackButton = () => {
+    
+    if(page!=0){
+      return(
+        <TouchableOpacity
+            style={{color:'white'}}
+            onPress={()=>{
+              setPage(0)
+            }}
+        >
+          <Text
+          style={{color:'black'}}
+          >返回</Text>
+        </TouchableOpacity>  
+      )
+    }else{
+      return(
+        <View  >
+            <Text>123</Text>
+        </View>
+      )
+    }
+  
+  }
   return (
       <View 
         style={{flexDirection:'column',flex:1}}
@@ -216,18 +237,10 @@ const App =  () => {
         style={{flex:1, flexDirection:'row',  }}
         >
 
-          <View style={{flex:1,justifyContent:'center',backgroundColor:'white',alignItems:'center' }}>
+          <View style={{flex:1,justifyContent:'center', alignItems:'center',backgroundColor:'white' }}>
 
             {
-            page!==0
-            ?
-            <TouchableOpacity
-               style={{color:'black'}}
-            >
-              <Text>返回</Text>
-            </TouchableOpacity>            
-            :
-            ""
+              getBackButton()
             }
           </View>
           <View style={{flex:3,backgroundColor:'white',justifyContent:'center',alignItems:'center'}}>
