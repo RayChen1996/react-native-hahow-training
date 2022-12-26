@@ -1,0 +1,101 @@
+{
+    "Readers":[
+        {
+            "idx":1,
+            "Name":"卡機1",
+            "IP":"192.168.50.1",
+            "Port":4444,
+            "TimeOut":3
+        },
+        {
+            "idx":1,
+            "Name":"卡機2",
+            "IP":"192.168.50.1",
+            "Port":4444,
+            "TimeOut":3
+        }
+        ,
+        {
+            "idx":1,
+            "Name":"卡機3",
+            "IP":"192.168.50.1",
+            "Port":4444,
+            "TimeOut":3
+        }
+    ],
+    "Cards":[
+        {
+            "idx":1,
+            "Name":"姓名1",
+            "card": 666666,
+            "tz":1,
+            "permit":1,
+            "readerId":1
+        },
+        {
+            "idx":1,
+            "Name":"姓名2",
+            "card": 666667,
+            "tz":1,
+            "permit":1,
+            "readerId":1
+        }
+        ,
+        {
+            "idx":1,
+            "Name":"姓名3",
+            "card": 666668,
+            "tz":1,
+            "permit":3,
+            "readerId":2
+        }
+    ],
+    "History":[
+        {
+            "idx":1,
+            "Name":"姓名3",
+            "card": 666668,
+            "tz":1,
+            "DateTime":1,
+            "State":1,
+            "readerId":2
+        },
+        {
+            "idx":1,
+            "Name":"姓名3",
+            "card": 666668,
+            "tz":1,
+            "DateTime":1,
+            "State":2,
+            "readerId":2
+        },
+        {
+            "idx":1,
+            "Name":"姓名3",
+            "card": 666668,
+            "tz":1,
+            "DateTime":1,
+            "State":1,
+            "readerId":2
+        },
+        {
+            "idx":1,
+            "Name":"姓名3",
+            "card": 666668,
+            "tz":1,
+            "DateTime":1,
+            "State":1,
+            "readerId":2
+        },
+        {
+            "idx":1,
+            "Name":"姓名3",
+            "card": 666668,
+            "tz":1,
+            "DateTime":1,
+            "State":1,
+            "readerId":2
+        }
+
+    ]    
+}
